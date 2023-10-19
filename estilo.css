@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playpen Sans', cursive;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
 .padre {
     color: #fff;
     font-size: x-large;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Playpen Sans', cursive;
 }
 
 .header {
@@ -22,21 +22,30 @@ body {
     height: 150px;
     padding: 10px;
 }
-
-.menu {
+.menu-container {
     display: flex;
     align-items: center;
-    background-color: #a07ac6; /* Fondo del menú */
+    /* Fondo del menú */
     margin-right: 300px;
+    background-color: #a07ac6;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade una sombra alrededor del contenedor */
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s;
+   
 }
+
 
 .menu ul {
     list-style: none;
     margin: 10px;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra los elementos del menú horizontalmente */
-    padding: 10px; /* Espaciado dentro del menú */
+    justify-content: center;
+    /* Centra los elementos del menú horizontalmente */
+    padding: 10px;
+    /* Espaciado dentro del menú */
 }
 
 .menu li {
@@ -53,50 +62,80 @@ body {
 
 main {
     background-color: #fff;
-    margin: 20px;
-    padding: 20px;
+    height: 100%;
+    text-align: center;
+    max-width: 100%;
+    /* Establece un ancho máximo del 100% del ancho de la ventana del navegador */
+    margin: 0 auto;
+    /* Centra el contenido en la ventana */
+ font-family: Arial, sans-serif;
 }
 
+
+
+/* Estilos para el video */
 #video {
-    text-align: center;
+    width: 400px;
 }
 
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
-    height: 0;
+    margin-bottom: 10%;
+
 }
 
 .video-container iframe {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: 2px solid #D3B3E0;
+    /* Lila claro */
 }
 
-#contenido {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* Estilos para la sección "Sobre Nosotros" */
+#sobre-nosotros {
+    padding: 20px;
 }
 
-.pagina {
-    flex: 0 1 calc(33.33% - 20px);
-    background-color: #f9f9f9;
-    margin: 10px;
-    padding: 10px;
+/* Estilos para todas las secciones */
+.historia,
+.filosofia,
+.excelencia,
+.futuro,
+.ubicacion {
+    background-color: #fff;
+    padding: 60px;
     border: 1px solid #ddd;
-    box-shadow: 2px 2px 5px #ddd;
     text-align: center;
+    /* Alineación del texto */
+    margin-bottom: 20px;
+    /* Espacio entre secciones */
+}
+
+.historia,
+.filosofia,
+.excelencia,
+.futuro,
+.ubicacion h2 {
+    color: #333;
+    font-size: 40px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.historia,
+.filosofia,
+.excelencia,
+.futuro,
+.ubicacion p {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 aside {
-    float: right;
+    float: left;
     width: 150px;
-    background-color: #333;
     color: #fff;
     position: fixed;
     right: 10px;
@@ -117,4 +156,52 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+}
+
+/* Estilos para el menú desplegable */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+#menu-toggle {
+    display: none; /* Ocultar inicialmente */
+    cursor: pointer;
+}
+
+/* Estilos para el botón de menú */
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú desplegable visible */
+nav.open {
+    display: block;
+}
+
+nav.open #menu-toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+nav.open #menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+nav.open #menu-toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Agrega estilos específicos aquí */
 }
