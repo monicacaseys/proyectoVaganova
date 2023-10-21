@@ -25,27 +25,36 @@ body {
 .menu-container {
     display: flex;
     align-items: center;
-    /* Fondo del menú */
-    margin-right: 300px;
     background-color: #a07ac6;
+    margin-right: 300px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade una sombra alrededor del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transform: perspective(1000px) rotateY(0deg);
     transition: transform 0.3s;
-   
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
 
 .menu ul {
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    /* Centra los elementos del menú horizontalmente */
-    padding: 10px;
-    /* Espaciado dentro del menú */
+        list-style: none;
+        padding: 10px;
+        text-align: center; /* Centra los elementos verticalmente */
+        margin: 0; /* Elimina el margen para evitar espacios innecesarios */
+        display: flex; /* Mantiene la disposición de los elementos en línea */
+     list-style-type: none; /* Elimina los puntos de la lista */
 }
 
 .menu li {
@@ -60,15 +69,52 @@ body {
     padding: 10px;
 }
 
+
+.menu-vertical {
+    display: none; /* Inicialmente oculto */
+    flex-direction: column; /* Cambia la orientación a vertical */
+    background-color: #a07ac6; /* Fondo lila */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+}
+
+.menu-vertical ul {
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.menu-vertical li {
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+.menu-vertical a {
+    display: block; /* Mostrar elementos de menú en bloques apilados verticalmente */
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+.hidden {
+    display: none;
+}
+
+
+.close-button {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
 main {
     background-color: #fff;
     height: 100%;
     text-align: center;
     max-width: 100%;
-    /* Establece un ancho máximo del 100% del ancho de la ventana del navegador */
     margin: 0 auto;
-    /* Centra el contenido en la ventana */
- font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -158,50 +204,3 @@ footer {
     padding: 10px 0;
 }
 
-/* Estilos para el menú desplegable */
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav li {
-    margin: 10px 0;
-}
-
-#menu-toggle {
-    display: none; /* Ocultar inicialmente */
-    cursor: pointer;
-}
-
-/* Estilos para el botón de menú */
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #000;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* Estilos para el menú desplegable visible */
-nav.open {
-    display: block;
-}
-
-nav.open #menu-toggle .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-nav.open #menu-toggle .bar:nth-child(2) {
-    opacity: 0;
-}
-
-nav.open #menu-toggle .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    /* Agrega estilos específicos aquí */
-}
