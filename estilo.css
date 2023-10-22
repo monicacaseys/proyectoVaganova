@@ -124,6 +124,9 @@ ul{
     .menu {
         display: none; /* Ocultar el menú horizontal en pantallas más pequeñas */
     }
+    .menu-container{
+        margin-right: 0;
+    }
 }
 
 
