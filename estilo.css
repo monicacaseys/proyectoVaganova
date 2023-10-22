@@ -89,7 +89,9 @@ ul{
   input:checked ~ label {
     background: lightgrey; 
   }
-  
+  .menu-vertical{
+    display: none;
+  }
   .menu-vertical ul{
     margin-top:0;
     padding: 0;
@@ -110,6 +112,17 @@ ul{
   .menu-vertical li:hover {
     filter: brightness(110%);
   }
+  /* Media query para mostrar/ocultar el botón de hamburguesa y el menú horizontal */
+@media screen and (max-width: 1160px) {
+    .menu-vertical {
+        display: block; /* Mostrar el botón en pantallas más pequeñas */
+    }
+
+    .menu {
+        display: none; /* Ocultar el menú horizontal en pantallas más pequeñas */
+    }
+}
+
 
 main {
     background-color: #fff;
