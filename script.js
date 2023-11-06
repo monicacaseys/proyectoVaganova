@@ -1,3 +1,13 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+
+
 /* // Selecciona los elementos del DOM que necesitas
 const menuToggle = document.getElementById('menu-toggle');
 const menuHorizontal = document.querySelector('.menu');

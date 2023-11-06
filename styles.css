@@ -1,0 +1,51 @@
+/* Estilos para el menú horizontal */
+nav {
+    background-color: #8f649b;
+    border-radius: 10px; /* Bordes redondos */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transform: perspective(1000px) rotateY(0deg);
+transition: transform 0.3s;
+    text-align: center; /* Centra horizontalmente el menú */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('fondo.jpg');
+     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-size:medium;
+    font-family: 'Playpen Sans', cursive;
+    height: 150px;
+}
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        text-align: left; /* Alinea el menú a la izquierda en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el logo */
+.logo img {
+    max-width: 150px; /* Ajusta el tamaño del logo según tus preferencias */
+}
+
+
+/* Estilos para centrar horizontalmente los elementos <li> */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para los elementos <li> */
+.nav-item {
+    padding: 0 30px; /* Espacio horizontal entre elementos <li> */
+}
+

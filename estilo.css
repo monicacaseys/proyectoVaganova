@@ -4,135 +4,72 @@ body {
     margin: 0;
     padding: 0;
 }
+p{
+ font-family: Arial, Helvetica, sans-serif;
+}
+/* Estilos para el menú horizontal */
+nav {
+    background-color: #ad7cbb;
+    border-radius: 10px;
+    /* Bordes redondos */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s;
+    text-align: center;
+    /* Centra horizontalmente el menú */
+    position: relative;
+    overflow: hidden;
+    z-index: 999; /* Asegura que esté en la parte superior */
 
-.padre {
-    color: #fff;
-    font-size: x-large;
-    font-family: 'Playpen Sans', cursive;
 }
 
-.header {
+
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-image: url('fondo.jpg');
-     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover;
+    /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+    /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    font-size: medium;
+    font-family: 'Playpen Sans', cursive;
     height: 150px;
 }
 
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        text-align: left;
+        /* Alinea el menú a la izquierda en pantallas pequeñas */
+    }
+}
+
+
+/* Estilos para el logo */
 .logo img {
-    width: 200px;
-    height: 200px;
-    padding: 5px;
- 
+    max-width: 150px;
+    /* Ajusta el tamaño del logo según tus preferencias */
 }
-.menu-container {
+
+
+/* Estilos para centrar horizontalmente los elementos <li> */
+.navbar-nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #8f649b;
-    margin-right: 300px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transform: perspective(1000px) rotateY(0deg);
-    transition: transform 0.3s;
-    border-radius: 5px;
 }
 
+/* Estilos para los elementos <li> */
+.nav-item {
+    padding: 0 30px;
+    /* Espacio horizontal entre elementos <li> */
 
-.menu ul {
-        list-style: none;
-        padding: 15px;
-        text-align: center; /* Centra los elementos verticalmente */
-        margin: 0; /* Elimina el margen para evitar espacios innecesarios */
-        display: flex; /* Mantiene la disposición de los elementos en línea */
-     
-}
-
-.menu li {
-    display: inline;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-}
-ul{
-    display: none;
-  }
-  
-  input:checked  ~ ul{
-    display:block;
-  }
-  
-  input {
-    display: none;
-  }
-  
-  label {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-  }
-  
-  /* Estilo del boton cuando se pasa el mouse por encima*/
-  label:hover{
-    background: rgba(230, 127, 233, 0.347);
-  }
-  
-  /* Estilo del boton cuando el menú está expandido*/
-  input:checked ~ label {
-    background: rgba(222, 130, 243, 0.699); 
-  }
-  .menu-vertical{
-    display: none;
-  }
-  .menu-vertical ul{
-    margin-top:0;
-    padding: 0;
-    width: 200px;
-  
-  }
-  .menu-vertical a {
-    color: #fff;
-  }
-
-  .menu-vertical li {
-    display: block;
-    background: #8f649b60;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    border-bottom: 1px solid grey;
-    
-  }
-  
-  /*Estilo cuando el mouse pasa encima de cada link del menu*/
-  .menu-vertical li:hover {
-    filter: brightness(110%);
-  }
-  /* Media query para mostrar/ocultar el botón de hamburguesa y el menú horizontal */
-@media screen and (max-width: 1160px) {
-    .menu-vertical {
-        display: block; /* Mostrar el botón en pantallas más pequeñas */
-    }
-
-    .menu {
-        display: none; /* Ocultar el menú horizontal en pantallas más pequeñas */
-    }
-    .menu-container{
-        margin-right: 0;
-    }
 }
 
 
@@ -151,19 +88,26 @@ main {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background-color: #f0f0f0; /* Agregando un color de fondo para ver el contenedor del video claramente */
+    background-color: #f0f0f0;
+    /* Agregando un color de fondo para ver el contenedor del video claramente */
 }
 
 .video-container {
     position: relative;
     width: 70%;
-    max-width: 600px; /* Limita el ancho máximo del contenedor para que no se desborde en ventanas pequeñas */
+    max-width: 600px;
+    /* Limita el ancho máximo del contenedor para que no se desborde en ventanas pequeñas */
+   
 }
 
 .video-container iframe {
     width: 450px;
     height: 300px;
     border: 2px solid #eac6f8;
+     /* Ajusta el ancho máximo para pantallas pequeñas */
+     @media (max-width: 768px) {
+        max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+    }
 }
 
 
@@ -184,6 +128,7 @@ main {
     /* Alineación del texto */
     margin-bottom: 20px;
     /* Espacio entre secciones */
+   
 }
 
 .historia,
@@ -204,26 +149,52 @@ main {
     margin-bottom: 10px;
     font-size: 18px;
 }
+
 .historia {
-    display: flex; /* Coloca los elementos uno al lado del otro */
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    display: flex;
+    /* Coloca los elementos uno al lado del otro */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
 }
 
 .historia .foto {
-    width: 70%; /* Divide el espacio en dos para la imagen y el texto */
-    padding-right: 20px; /* Agrega espacio entre la imagen y el texto */
+    width: 70%;
+    /* Divide el espacio en dos para la imagen y el texto */
+    padding-right: 20px;
+    /* Agrega espacio entre la imagen y el texto */
 }
 
-.historia .foto img {
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+
+
+
+@media (max-width: 768px) {
+    .historia {
+        flex-direction: column;
+   
 }
-
-
-
+    #sobre-nosotros {
+        padding: 10px; /* Reduce el espacio entre elementos en pantallas pequeñas */
+    }
+    
+    #sobre-nosotros .foto {
+        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+        max-width: 50%; /* Puedes ajustar el tamaño máximo según tus necesidades */
+        margin-bottom: 10px; /* Reduce el espacio entre la imagen y el texto */
+    }
+    
+    #sobre-nosotros h2 {
+        font-size: 20px; /* Reduce el tamaño del título h2 en pantallas pequeñas */
+    }
+    
+    #sobre-nosotros p {
+        font-size: 14px; /* Reduce el tamaño del párrafo en pantallas pequeñas */
+    }
+}
 
 aside {
     float: left;
-    width: 150px;
+    min-width: 150px; /* Establece un ancho mínimo para evitar que sea demasiado estrecho */
+    width: auto; /* Permite que el ancho se ajuste según el contenido */
     color: #fff;
     position: fixed;
     right: 10px;
@@ -231,6 +202,7 @@ aside {
     transform: translateY(-50%);
     padding: 20px;
 }
+
 
 #redes-sociales img,
 #contacto img {
@@ -245,4 +217,3 @@ footer {
     color: #fff;
     padding: 10px 0;
 }
-
