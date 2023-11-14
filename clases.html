@@ -54,13 +54,22 @@
     </header>
 
     <main>
+        <h1 id="ojo">¡Echa un ojo a nustras clases!</h1>
         <div id="cont">
-        <div class="elemento" id="elemento1">Pre-ballet</div>
-        <div class="elemento" id="elemento2">Ballet iniciacion</div>
-        <div class="elemento" id="elemento3">Ballet avanzado</div>
-        <div class="elemento" id="elemento4">Ballet adultos</div>
-        <div class="elemento" id="elemento5">Pilates</div>
+        <div class="elemento" onclick="mostrarModal('Información del Elemento 1')">Pre-ballet</div>
+        <div class="elemento" onclick="mostrarModal('Información del Elemento 1')">Ballet iniciacion</div>
+        <div class="elemento" onclick="mostrarModal('Información del Elemento 1')">Ballet avanzado</div>
+        <div class="elemento" onclick="mostrarModal('Información del Elemento 1')">Ballet adultos</div>
+        <div class="elemento" onclick="mostrarModal('Información del Elemento 1')">Pilates</div>
         </div>
+
+        <div id="modal" class="modal" onclick="cerrarModal()">
+            <div class="modal-contenido">
+              <span class="cerrar" onclick="cerrarModal()">&times;</span>
+              <p id="modal-texto"></p>
+            </div>
+          </div>
+          
     </main>
 
 

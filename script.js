@@ -5,15 +5,19 @@ menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const elementos = document.querySelectorAll(".elemento");
+function mostrarModal(texto) {
+  var modal = document.getElementById("modal");
+  var modalTexto = document.getElementById("modal-texto");
 
-  elementos.forEach(elemento => {
-    elemento.addEventListener("click", function () {
-      alert("Información sobre " + this.innerText);
-    });
-  });
-});
+  modalTexto.innerHTML = texto;
+  modal.style.display = "block";
+}
+
+function cerrarModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
 
 
 
