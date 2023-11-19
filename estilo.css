@@ -9,7 +9,7 @@ p{
 }
 /* Estilos para el menú horizontal */
 nav {
-    background-color: #ad7cbb;
+    background-color: #C484AC;
     border-radius: 10px;
     /* Bordes redondos */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('fondo.jpg');
+   
     background-size: cover;
     /* Ajusta la imagen al tamaño del contenedor */
     background-position: center;
@@ -67,10 +67,12 @@ header {
 
 /* Estilos para los elementos <li> */
 .nav-item {
-    padding: 0 30px;
+    padding: 0 20px;
     /* Espacio horizontal entre elementos <li> */
 
 }
+
+
 
 
 main {
@@ -131,15 +133,18 @@ main {
    
 }
 
-.historia,
-.filosofia,
-.excelencia,
-.futuro,
+
+.historia h2,
+.filosofia h2,
+.excelencia h2,
+.futuro h2,
 .ubicacion h2 {
-    color: #333;
-    font-size: 40px;
+    color: #A65189;
+    font-size: 35px;
     font-family: 'Playpen Sans', cursive;
+    text-shadow: 2px 2px 4px rgb(116, 116, 116);
 }
+
 
 .historia,
 .filosofia,
@@ -148,6 +153,7 @@ main {
 .ubicacion p {
     margin-bottom: 10px;
     font-size: 18px;
+  
 }
 
 .historia,.filosofia,
@@ -184,7 +190,9 @@ main {
     /* Agrega espacio entre la imagen y el texto */
 }
 
-
+.texto{
+    margin: 50px;
+}
 @media (max-width: 768px) {
     .historia,.filosofia,
     .excelencia,
