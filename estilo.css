@@ -60,13 +60,15 @@ nav {
 @media (max-width: 990px) {
     nav {
         width: 110px !important;
+        margin-right: 0 !important;
+        padding: 0 0px !important;
     }
     .nav-item {
         padding: 0 0px !important;
     }
     .logo img {
         margin: 0;
-        max-width: 100px; /* Puedes ajustar según sea necesario */
+      
     }
 }
 
