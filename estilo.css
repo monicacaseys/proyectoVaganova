@@ -251,7 +251,7 @@ footer {
     line-height: 200px; /* Centra el texto verticalmente */
     border-radius: 50%;
     background-color: #d3d3d3;
-    color: #734a99;
+    color: #A65189;
     font-size: 22px;
     cursor: pointer;
     transition: font-size 0.3s, color 0.3s;
@@ -264,7 +264,7 @@ footer {
     font-size: 28px; /* Aumenta el tamaño del texto al pasar el ratón */
     color: #010001; /* Color de texto lila */
     background-color: #817b7b; /* Gris claro */
-    border: 8px solid #ae71e7; /* Borde lila claro */
+    border: 8px solid #A65189; /* Borde lila claro */
   }
   #cont{
     padding-top: 100px;
@@ -276,5 +276,12 @@ footer {
   }
   
   
+  /*ESTILO PAGINA NOTICIAS*/
+  #container h1{
+    color: #A65189;
+    font-size: 35px;
+    font-family: 'Playpen Sans', cursive;
+    text-shadow: 1px 2px 3px rgb(116, 116, 116);
+  }
   
   
