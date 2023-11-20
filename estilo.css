@@ -65,16 +65,10 @@ nav {
         padding: 0 0px !important;
     }
     .logo img {
-        margin: 2px;
-        max-width: 150px; /* Puedes ajustar según sea necesario */
+        margin: 0;
+        max-width: 100px; /* Puedes ajustar según sea necesario */
     }
 }
-
-
-
-
-
-
 
 main {
     background-color: #fff;
@@ -226,7 +220,7 @@ main {
 
 aside {
     float: left;
-    min-width: 150px; /* Establece un ancho mínimo para evitar que sea demasiado estrecho */
+    min-width: 10px; /* Establece un ancho mínimo para evitar que sea demasiado estrecho */
     width: auto; /* Permite que el ancho se ajuste según el contenido */
     color: #fff;
     position: fixed;
