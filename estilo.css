@@ -149,10 +149,10 @@ main {
 }
 
 
-.historia,
-.filosofia,
-.excelencia,
-.futuro,
+.historia p,
+.filosofia p,
+.excelencia p,
+.futuro p,
 .ubicacion p {
     margin-bottom: 10px;
     font-size: 18px;
@@ -194,7 +194,7 @@ main {
 }
 
 .texto{
-    margin: 50px;
+    margin: 40px;
 }
 @media (max-width: 768px) {
     .historia,.filosofia,
