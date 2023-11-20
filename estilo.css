@@ -7,24 +7,6 @@ body {
 p{
  font-family: Arial, Helvetica, sans-serif;
 }
-/* Estilos para el menú horizontal */
-nav {
-    background-color: #C484AC;
-    border-radius: 10px;
-    /* Bordes redondos */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-    transform: perspective(1000px) rotateY(0deg);
-    transition: transform 0.3s;
-    text-align: center;
-    /* Centra horizontalmente el menú */
-    position: relative;
-    overflow: hidden;
-    z-index: 999; /* Asegura que esté en la parte superior */
-
-}
-
-
 
 header {
     display: flex;
@@ -42,35 +24,54 @@ header {
     height: 150px;
 }
 
-/* Estilos para el menú desplegable en pantallas pequeñas */
-@media (max-width: 990px) {
-    nav {
-        width: 85px;
-    }
+/* Estilos para el menú horizontal */
+nav {
+    background-color: #C484AC;
+    border-radius: 10px;
+    /* Bordes redondos */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.3s;
+    text-align: center;
+    /* Centra horizontalmente el menú */
+    position: relative;
+    overflow: hidden;
+    z-index: 999; /* Asegura que esté en la parte superior */
+
 }
-
-
-/* Estilos para el logo */
-.logo img {
-    max-width: 200px;
-    margin: 5px;
-    /* Ajusta el tamaño del logo según tus preferencias */
-}
-
-
 /* Estilos para centrar horizontalmente los elementos <li> */
 .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 /* Estilos para los elementos <li> */
 .nav-item {
     padding: 0 20px;
+    
     /* Espacio horizontal entre elementos <li> */
 
 }
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 990px) {
+    nav {
+        width: 110px !important;
+    }
+    .nav-item {
+        padding: 0 0px !important;
+    }
+    .logo img {
+        margin: 2px;
+        max-width: 150px; /* Puedes ajustar según sea necesario */
+    }
+}
+
+
+
 
 
 
