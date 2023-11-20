@@ -43,10 +43,9 @@ header {
 }
 
 /* Estilos para el menú desplegable en pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     nav {
-        text-align: left;
-        /* Alinea el menú a la izquierda en pantallas pequeñas */
+        width: 85px;
     }
 }
 
@@ -54,6 +53,7 @@ header {
 /* Estilos para el logo */
 .logo img {
     max-width: 200px;
+    margin: 5px;
     /* Ajusta el tamaño del logo según tus preferencias */
 }
 
