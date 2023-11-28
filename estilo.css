@@ -247,34 +247,42 @@ footer {
     font-family: 'Playpen Sans', cursive;
     display: inline-block;
     width: 250px; /* Ancho del círculo */
-    height: 250px; /* Altura del círculo */
+    height: 200px; /* Altura del círculo */
     line-height: 200px; /* Centra el texto verticalmente */
     border-radius: 50%;
-    background-color: #d3d3d3;
-    color: #A65189;
+    background-color:  #504e50;
+    color: #f5b3df;
     font-size: 22px;
     cursor: pointer;
     transition: font-size 0.3s, color 0.3s;
     text-align: center; /* Centra el texto horizontalmente */
     margin-right: 20px; /* Espacio entre los círculos */
-    border: 8px solid #504e50; /* Borde lila claro */
+    border: 8px solid #d3d3d3; /* Borde lila claro */
   }
   
   .elemento:hover {
     font-size: 28px; /* Aumenta el tamaño del texto al pasar el ratón */
     color: #010001; /* Color de texto lila */
     background-color: #817b7b; /* Gris claro */
-    border: 8px solid #A65189; /* Borde lila claro */
+    border: 8px solid  #f5b3df; /* Borde lila claro */
   }
   #cont{
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 200px;
   }
   #ojo{
     font-family: 'Playpen Sans', cursive;
     padding-top: 20px;
+    animation: grande 3s ;
   }
   
+  @keyframes grande {
+    to{
+        font-size: 50px;
+    }
+    
+  }
+
   
   /*ESTILO PAGINA NOTICIAS*/
   #container h1{
@@ -284,4 +292,8 @@ footer {
     text-shadow: 1px 2px 3px rgb(116, 116, 116);
   }
   
+  /*ESTILO PAGINA MAIL*/
+
   
+
+
