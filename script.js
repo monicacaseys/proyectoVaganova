@@ -1,3 +1,4 @@
+"use strict";
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -17,7 +18,5 @@ function cerrarModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
-
-
 
 

@@ -54,23 +54,24 @@
     </header>
 
     <main>
-        <form method='POST'>
+        <form id="formulario">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input style="width: 40%; margin-left: 30%;" type="text" class="form-control" name='nombre' id="nombre" placeholder="nombre...">
+                <div id="errorNombre"></div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input  style="width: 40%; margin-left: 30%;" type="email" class="form-control" name='email' id="email" placeholder="email...">
             </div>
             <div class="form-group">
-                <label for="exampleTextarea">Mensaje</label>
+                <label for="mensaje">Mensaje</label>
                 <textarea  style="width: 40%; margin-left: 30%;" class="form-control" name='mensaje' id="mensaje" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <input type="checkbox" required> Acepto la política de privacidad.
             </div>
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button style="margin: 10px;" class="btn btn-primary" type="submit">Enviar</button>
         </form>
           
     </main>
@@ -96,7 +97,45 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        
+//validar formulario
+var formulario = document.getElementById('formulario');
+var errorNombre = document.getElementById("errorNombre");
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('nombre').addEventListener("blur", validarNombre);
+
+  // Evento que se ejecuta cuando se confirma la reserva
+  formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Move these variable declarations inside the submit event listener
+    var nombre = document.getElementById('nombre').value;
+    var email = document.getElementById('email').value;
+    var mensaje = document.getElementById('mensaje').value;
+
+    if (nombre === "" || email === "" || mensaje === "" || errorNombre!=="")  {
+      alert("Por favor, complete correctamente los campos del formulario de reserva");
+    } else {
+      alert("Mensaje enviado con éxito.");
+    }
+  });
+});
+
+function validarNombre() {
+  var nombre = document.getElementById('nombre').value;
+  var patron = /^[a-zA-Z]+$/;
+  if (!patron.test(nombre)) {
+    errorNombre.style.color="red";
+    errorNombre.innerHTML = "Introduzca un valor correcto (solo letras)";
+   
+  } else {
+    errorNombre.innerHTML = "";
+  }
+}
+
+    </script>
 </body>
 
 </html>
