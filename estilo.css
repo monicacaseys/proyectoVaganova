@@ -285,11 +285,18 @@ footer {
 
   
   /*ESTILO PAGINA NOTICIAS*/
+  #container{
+    position: relative;
+    margin-bottom: 20px;
+  }
   #container h1{
     color: #A65189;
     font-size: 35px;
     font-family: 'Playpen Sans', cursive;
     text-shadow: 1px 2px 3px rgb(116, 116, 116);
+    margin: 10px;
+    padding: 20px;
+    
  
   }
   .noticia{
@@ -301,12 +308,57 @@ footer {
   }
   .noticia p {
     font-size: 18px;
+    text-align: justify;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 20px;
+    
   }
   .noticia h2{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 1px 2px 3px #A65189;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    
   }
+  .noticia h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:#A65189; /* Color de la línea */
+    animation: expandLine 1s forwards; /* Nombre de la animación y duración */
+  }
+
+  @keyframes expandLine {
+    to {
+      width: 100%; /* Ancho completo al final de la animación */
+    }
+}
+  .noticia a{
+    background-color: #C484AC;
+    color: #010001;
+    border-radius: 10px; /* Puedes ajustar el valor según tus preferencias */
+    padding: 10px 20px;
+    font-family: 'Playpen Sans', cursive;
+  }
+  .like-button {
+    cursor: pointer;
+    margin-left: 10px;
   
+  }
+  #likes-list {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    padding: 0; /* Elimina el espacio de relleno predeterminado en la lista */
+  }
+
+  #likes-list li {
+    margin-bottom: 5px; /* Espaciado entre elementos de lista */
+  }
+
+   
   /*ESTILO PAGINA MAIL*/
 
   

@@ -7,6 +7,9 @@
     <title>Escuela de Ballet</title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -53,27 +56,31 @@
     </header>
 
     <main>
+     
         <div id="container">
             <h1>NOTICIAS</h1>
             
-            <section class="noticia">
-                <h2>Alejandro Santomé Leiro, joven talento de la danza clásica</h2>
+            <section class="noticia" id="noticia1">
+                <h2>JOVEN TALENTO DE LA DANZA CLÁSICA</h2>
                 <p class="metadatos">Fecha: <time datetime="2023-03-28">28 de marzo de 2023</time></p>
                 <p>Es alumno de la “ESDAC VAGANOVA- Escuela Superior de Danza y Artes Coreográficas de Pontevedra” pero vecino de Marín, y el pasado domingo, 26 de marzo, el estuvo entre los 45 seleccionados de los 700 participantes internacionales que se presentaron para entrar en la “Nacho Duato Academy” , escuela de alto rendimiento para formación de bailarines de danza clásica y contemporánea que se inaugurará en Madrid el próximo septiembre de 2023</p>
                 <a href="https://www.carriola.es/index.php/noticias-de-marin-by-julio-santos/4721-alejandro-santome-leiro-otro-joven-talento-de-la-danza-clasica-que-triunfa-en-madrid-al-conseguir-beca-para-estudiar-en-la-academia-del-famoso-coreografo-nacho-duato" target="_blank" class="ver-mas">Ver más</a>
+                <span class="like-button" onclick="toggleLike('noticia1')">❤️</span>
             </section>
-            <section class="noticia">
-                <h2>Las promesas de la danza de Pontevedra</h2>
+            <section class="noticia" id="noticia2">
+                <h2>LAS PROMESAS DE LA DANZA EN PONTEVEDRA</h2>
                 <p class="metadatos">Fecha: <time datetime="2023-04-04">04 de abril de 2023</time></p>
                 <p>Son las dos grandes promesas de la danza pontevedresa. Alex Klaudio de Armas y Alejandro Santomé, de la Escuela de Danza Vaganova. Escuela Superior de Danza y Artes Coreográficas de Pontevedra, acaban de ser seleccionados para realizar la estancia y formación profesional con beca durante el curso 2023-2024 en la Nacho Duato Academy. «Hicimos una audición on line, la mandamos un miércoles. En principio, era solo para el curso de verano, pero luego nos llamaron para la audición de lo que sería el año escolar. En ese mismo fin de semana, nos fuimos a Madrid e hicimos la audición. Y nos cogieron», señala Santomé.</p>
                 <a href="https://www.lavozdegalicia.es/noticia/pontevedra/pontevedra/2023/04/04/nacho-duato-iba-eligiendo-veia-tenian-tecnica-futuro/0003_202304P4C5991.htm" target="_blank" class="ver-mas">Ver más</a>
+                <span class="like-button" onclick="toggleLike('noticia2')">❤️</span>
             </section>
 
-            <section class="noticia">
-                <h2>Ocho adolescentes de Pontevedra compartirán escenario con bailarines del Bolshói</h2>
+            <section class="noticia" id="noticia3">
+                <h2>BAILARINES DE PONTEVEDRA COMPARTEN ESCENARIO</h2>
                 <p class="metadatos">Fecha: <time datetime="2023-02-16">16 de febrero de 2023</time></p>
                 <p>Alejandro, Álex Klaudio, Carlota, Carmen, Claudia, Olivia, María e Iria. Son los nombres de los ocho adolescentes de la comarca de Pontevedra que, con edades comprendidas entre los 14 a los 16 años, tendrán ocasión de compartir escenario con los bailarines principales del Bolshoi Ballet, Stuttgart Ballet y Marinsky Theatre. Según destacaron desde la Escuela de Danza Vaganova Pontevedra, dirigida por Jean-François Seys e Inma Oltra, todos ellos han sido seleccionados para asistir al Summer Intensive Course que se desarrollará entre el 3 y el 24 de julio en Alicante.</p>
                 <a href="https://www.lavozdegalicia.es/noticia/pontevedra/2022/02/16/8-adolescentes-compartiran-escenario-bailarines-bolshoi/0003_202202P16C2992.htm" target="_blank" class="ver-mas">Ver más</a>
+                <span class="like-button" onclick="toggleLike('noticia3')">❤️</span>
             </section>
            <!--  <section class="noticia">
                 <h2>Título de la noticia 1</h2>
@@ -83,7 +90,70 @@
             </section> -->
 
         </div>
+        <div id="likes-container">
+            <h2>Tus Noticias Favoritas</h2>
+            <ul id="likes-list"></ul>
+          </div>
      
+<script>
+    function toggleLike(noticiaId) {
+      const likeButton = document.querySelector(`#${noticiaId} .like-button`);
+      const isLiked = likeButton.classList.contains('liked');
+  
+      if (isLiked) {
+        likeButton.classList.remove('liked');
+      } else {
+        likeButton.classList.add('liked');
+      }
+  
+      updateLikeInStorage(noticiaId, !isLiked);
+    }
+  
+    function updateLikeInStorage(noticiaId, isLiked) {
+      const likedNoticias = localStorage.getItem('likedNoticias') || '';
+  
+      if (isLiked) {
+        localStorage.setItem('likedNoticias', `${likedNoticias}${noticiaId},`);
+      } else {
+        const updatedLikes = likedNoticias.replace(`${noticiaId},`, '').replace(`${noticiaId}`, '');
+        localStorage.setItem('likedNoticias', updatedLikes);
+      }
+  
+      updateLikesList();
+    }
+  
+    function updateLikesList() {
+  const likedNoticias = localStorage.getItem('likedNoticias') || '';
+  const likesListElement = document.getElementById('likes-list');
+
+  likesListElement.innerHTML = '';
+
+  likedNoticias.split(',').forEach(noticiaId => {
+    if (noticiaId) {
+      const noticiaElement = document.getElementById(noticiaId);
+
+      // Verificar si el elemento existe antes de intentar acceder a sus propiedades
+      if (noticiaElement) {
+        const noticiaTitleElement = noticiaElement.querySelector('h2');
+
+        // Verificar si el elemento h2 existe antes de intentar acceder a su texto
+        if (noticiaTitleElement) {
+          const noticiaTitle = noticiaTitleElement.textContent;
+          const listItem = document.createElement('li');
+          listItem.textContent = noticiaTitle;
+          likesListElement.appendChild(listItem);
+        }
+      }
+    }
+  });
+}
+
+  
+    window.addEventListener('load', () => {
+      updateLikesList();
+    });
+  </script>
+  
     </main>
 
 
