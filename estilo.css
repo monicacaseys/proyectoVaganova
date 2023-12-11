@@ -360,7 +360,45 @@ footer {
 
    
   /*ESTILO PAGINA MAIL*/
+   /*ESTILO PAGINA FESTIVAL*/
 
   
+   .festival{
+    background-color: rgba(210, 234, 250, 0.301);
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+  
+  }
+  .festival p {
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 20px;
+    
+  }
+  .festival h2{
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    display:flexbox;
+    margin: 20px;
+    
+  }
+  .festival h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:#A65189; /* Color de la línea */
+    animation: expandLine 1s forwards; /* Nombre de la animación y duración */
+  }
 
+  @keyframes expandLine {
+    to {
+      width: 100%; /* Ancho completo al final de la animación */
+    }
+}
 
