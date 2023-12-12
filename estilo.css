@@ -246,10 +246,10 @@ footer {
 .elemento {
     font-family: 'Playpen Sans', cursive;
     display: inline-block;
-    width: 250px; /* Ancho del círculo */
-    height: 200px; /* Altura del círculo */
-    line-height: 200px; /* Centra el texto verticalmente */
-    border-radius: 50%;
+    width: 200px; /* Ancho del círculo */
+    height: 150px; /* Altura del círculo */
+    line-height: 150px; /* Centra el texto verticalmente */
+    border-radius: 20%;
     background-color:  #504e50;
     color: #f5b3df;
     font-size: 22px;
@@ -261,7 +261,7 @@ footer {
   }
   
   .elemento:hover {
-    font-size: 28px; /* Aumenta el tamaño del texto al pasar el ratón */
+    font-size: 21px; /* Aumenta el tamaño del texto al pasar el ratón */
     color: #010001; /* Color de texto lila */
     background-color: #817b7b; /* Gris claro */
     border: 8px solid  #f5b3df; /* Borde lila claro */
