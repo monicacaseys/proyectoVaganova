@@ -241,7 +241,7 @@ footer {
 }
 
 /* estilos para clases */
-/* Puedes adaptar estos estilos según la estructura actual de tu página */
+
 
 .elemento {
     font-family: 'Playpen Sans', cursive;
@@ -271,9 +271,15 @@ footer {
     padding-bottom: 200px;
   }
   #ojo{
-    font-family: 'Rajdhani', sans-serif;
+    
     padding-top: 20px;
     animation: grande 3s ;
+    color: #030203;
+  font-size: 35px;
+  font-family: 'Playpen Sans', cursive;
+  text-shadow: 1px 2px 3px #A65189;
+  margin: 10px;
+
   }
   
   @keyframes grande {
@@ -362,14 +368,21 @@ footer {
   /*ESTILO PAGINA MAIL*/
    /*ESTILO PAGINA FESTIVAL*/
 
-  
+   #container {
+    max-width: 900px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+}
    .festival{
     background-color: rgba(210, 234, 250, 0.301);
     padding: 10px;
     width: 70%;
     margin: auto;
+    margin-bottom: 20px;
   
   }
+  iframe {
+    width: 100%; /* Hace que los iframes ocupen el 100% del ancho del contenedor padre */
+}
   .festival p {
     font-size: 18px;
     text-align: justify;
