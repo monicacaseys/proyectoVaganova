@@ -54,8 +54,6 @@ nav {
 /* Estilos para los elementos <li> */
 .nav-item {
     padding: 0 20px;
-    
-    /* Espacio horizontal entre elementos <li> */
 
 }
 
@@ -209,7 +207,7 @@ main {
     
     #sobre-nosotros .foto {
         width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-        max-width: 50%; /* Puedes ajustar el tamaño máximo según tus necesidades */
+        max-width: 50%; 
         margin-bottom: 10px; /* Reduce el espacio entre la imagen y el texto */
     }
     
@@ -226,7 +224,7 @@ main {
 aside {
     float:left;
     min-width: 10px; /* Establece un ancho mínimo para evitar que sea demasiado estrecho */
-    width: auto; /* Permite que el ancho se ajuste según el contenido */
+    width: auto; 
     color: #fff;
     position: fixed;
     right: 3px;
@@ -267,14 +265,14 @@ footer {
     transition: font-size 0.3s, color 0.3s;
     text-align: center; /* Centra el texto horizontalmente */
     margin-right: 20px; /* Espacio entre los círculos */
-    border: 8px solid #d3d3d3; /* Borde lila claro */
+    border: 8px solid #d3d3d3;
   }
   
   .elemento:hover {
     font-size: 21px; /* Aumenta el tamaño del texto al pasar el ratón */
-    color: #010001; /* Color de texto lila */
-    background-color: #817b7b; /* Gris claro */
-    border: 8px solid  #f5b3df; /* Borde lila claro */
+    color: #010001; 
+    background-color: #817b7b; 
+    border: 8px solid  #f5b3df; 
   }
   #cont{
     padding-top: 80px;
@@ -344,8 +342,8 @@ footer {
     left: 0;
     width: 0;
     height: 2px;
-    background-color:#A65189; /* Color de la línea */
-    animation: expandLine 1s forwards; /* Nombre de la animación y duración */
+    background-color:#A65189; 
+    animation: expandLine 1s forwards; 
   }
 
   @keyframes expandLine {
@@ -356,7 +354,7 @@ footer {
   .noticia a{
     background-color: #C484AC;
     color: #010001;
-    border-radius: 10px; /* Puedes ajustar el valor según tus preferencias */
+    border-radius: 10px; 
     padding: 10px 20px;
     font-family: 'Playpen Sans', cursive;
   }
@@ -379,7 +377,7 @@ footer {
    /*ESTILO PAGINA FESTIVAL*/
 
    #container {
-    max-width: 900px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    max-width: 900px; 
     margin: 0 auto; /* Centrar el contenedor en la página */
 }
    .festival{
@@ -391,7 +389,7 @@ footer {
   
   }
   iframe {
-    width: 100%; /* Hace que los iframes ocupen el 100% del ancho del contenedor padre */
+    width: 100%; /*Iframes ocupen el 100% del ancho del contenedor padre */
 }
   .festival p {
     font-size: 18px;
@@ -415,8 +413,8 @@ footer {
     left: 0;
     width: 0;
     height: 2px;
-    background-color:#A65189; /* Color de la línea */
-    animation: expandLine 1s forwards; /* Nombre de la animación y duración */
+    background-color:#A65189; 
+    animation: expandLine 1s forwards;
   }
 
   @keyframes expandLine {
