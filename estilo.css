@@ -325,6 +325,7 @@ footer {
     text-align: justify;
     font-family: 'Rajdhani', sans-serif;
     margin: 20px;
+    -webkit-text-stroke-width: 0.5px;
     
   }
   .noticia h2{
@@ -332,6 +333,7 @@ footer {
     position: relative;
     display: inline-block;
     margin: 20px;
+    -webkit-text-stroke-width: 1px;
     
   }
   .noticia h2::after {
