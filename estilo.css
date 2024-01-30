@@ -8,16 +8,6 @@ p{
  font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.rotatable {
-  transition: transform 0.5s ease;
-}
-
-.logo:hover .rotatable {
-  transform: rotate(360deg);
-}
-
-
 header {
     display: flex;
     justify-content: space-between;
@@ -167,30 +157,47 @@ main {
 }
 
 .excelencia .foto {
-    width: 70%;
+    width: 80%;
     /* Divide el espacio en dos para la imagen y el texto */
-    padding-right: 20px;
+    padding-right: 5px;
     /* Agrega espacio entre la imagen y el texto */
 }
 .historia .foto {
-    width: 70%;
+    width: 90%;
     /* Divide el espacio en dos para la imagen y el texto */
-    padding-right: 20px;
+    padding-right: 5px;
     /* Agrega espacio entre la imagen y el texto */
 }
 .filosofia .foto {
-    width: 70%;
+    width: 80%;
     /* Divide el espacio en dos para la imagen y el texto */
-    padding-right: 20px;
+    padding-right: 5px;
     /* Agrega espacio entre la imagen y el texto */
 }
 .futuro .foto {
-    width: 70%;
+    width: 80%;
     /* Divide el espacio en dos para la imagen y el texto */
-    padding-right: 20px;
+    padding-right: 5px;
     /* Agrega espacio entre la imagen y el texto */
 }
 
+#video ::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color:#A65189; 
+  animation: expandLine 1s forwards; 
+}
+
+@keyframes expandLine {
+  to {
+    width: 100%; /* Ancho completo al final de la animación */
+  }
+}
 .texto{
     margin: 40px;
 }
@@ -207,7 +214,7 @@ main {
     
     #sobre-nosotros .foto {
         width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-        max-width: 50%; 
+        max-width: 100%; 
         margin-bottom: 10px; /* Reduce el espacio entre la imagen y el texto */
     }
     
@@ -259,7 +266,7 @@ footer {
     line-height: 150px; /* Centra el texto verticalmente */
     border-radius: 20%;
     background-color:  #504e50;
-    color: #f5b3df;
+    color: #ffffff;
     font-size: 22px;
     cursor: pointer;
     transition: font-size 0.3s, color 0.3s;
@@ -282,11 +289,10 @@ footer {
     
     padding-top: 20px;
     animation: grande 3s ;
-    color: #030203;
-  font-size: 35px;
-  font-family: 'Playpen Sans', cursive;
-  text-shadow: 1px 2px 3px #A65189;
-  margin: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
 
   }
   
@@ -422,4 +428,5 @@ footer {
       width: 100%; /* Ancho completo al final de la animación */
     }
 }
+
 
