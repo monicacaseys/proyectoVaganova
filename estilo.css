@@ -260,48 +260,50 @@ footer {
 
 .elemento {
   font-family: 'Rajdhani', sans-serif;
-    display: inline-block;
-    width: 200px; /* Ancho del círculo */
-    height: 150px; /* Altura del círculo */
-    line-height: 150px; /* Centra el texto verticalmente */
-    border-radius: 20%;
-    background-color:  #504e50;
-    color: #ffffff;
-    font-size: 22px;
-    cursor: pointer;
-    transition: font-size 0.3s, color 0.3s;
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-right: 20px; /* Espacio entre los círculos */
-    border: 8px solid #d3d3d3;
-  }
+  display: inline-block;
+  width: 200px; /* Ancho del círculo */
+  height: 150px; /* Altura del círculo */
+  line-height: 150px; /* Centra el texto verticalmente */
+  border-radius: 20%;
+  color: #000000;
+  font-size: 22px;
+  font-weight: bold; /* Hace que el texto sea negrita */
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s;
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-right: 20px; /* Espacio entre los círculos */
+  border: 2px solid #0f0f0f;
+  box-shadow: 4px 6px 8px #a5548af1; /* Sombra rosa */
+}
+
   
   .elemento:hover {
     font-size: 21px; /* Aumenta el tamaño del texto al pasar el ratón */
     color: #010001; 
-    background-color: #817b7b; 
-    border: 8px solid  #f5b3df; 
+    background-color: #cbcbcb; 
+   
   }
   #cont{
     padding-top: 80px;
     padding-bottom: 200px;
   }
   #ojo{
-    
     padding-top: 20px;
-    animation: grande 3s ;
     font-family: 'Rajdhani', sans-serif;
     position: relative;
     display: inline-block;
     margin: 20px;
 
   }
-  
-  @keyframes grande {
-    to{
-        font-size: 50px;
-    }
-    
+
+  /* Estilo para pantallas pequeñas (móviles, tablets, etc.) */
+@media screen and (max-width: 767px) {
+  .elemento {
+    margin: 20px;
   }
+}
+  
+ 
 
   
   /*ESTILO PAGINA NOTICIAS*/
@@ -382,6 +384,53 @@ footer {
 
    
   /*ESTILO PAGINA MAIL*/
+
+  #containerEmail h2 {
+    color: #A65189;
+    font-size: 35px;
+    font-family: 'Playpen Sans', cursive;
+    text-shadow: 1px 2px 3px rgb(116, 116, 116);
+}
+
+#containerMail {
+    width: 100%;
+    padding: 10px;
+    border-style: groove;
+    border-radius: 10px;
+    background-color: rgba(186, 203, 236, 0.484);
+    display: flex !important;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-between; /* Agregar espacio entre los divs en pantallas grandes */
+}
+
+#ubicacion,
+#containerEmail {
+    width: 48%; /* Ancho del div en pantallas grandes */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin-bottom: 10px; /* Espacio entre los divs */
+    flex-grow: 1; /* Hace que los divs ocupen el espacio disponible */
+}
+
+
+@media screen and (max-width: 768px) {
+    #ubicacion,
+    #containerEmail {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin: 0; /* Elimina el margen en pantallas pequeñas */
+    }
+}
+
+/* Estilos específicos para ubicacion */
+#ubicacion {
+    padding: 30px;
+}
+
+/* Estilos específicos para containerEmail */
+#containerEmail {
+    padding: 10px;
+}
+
+
    /*ESTILO PAGINA FESTIVAL*/
 
    #container {
